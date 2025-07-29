@@ -15,12 +15,6 @@
   # Rember that there is a ending . for the new_target
   # This only works on A records
 
-  vars:
-    zone:         'bank'
-    record_name:  'dummyalias.int'
-    ttl_seconds:  '60'
-    new_target:   'mydummyhost.bank.local.'
-
   tasks:
     - name: Execute Set-DNSTTLCNAME on labadexternal via Jump01
       ansible.windows.win_command: >
