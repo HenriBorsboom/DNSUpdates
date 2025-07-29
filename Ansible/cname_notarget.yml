@@ -1,5 +1,6 @@
 ---
 - name: "Hop through Jump01 to Update DNS"
+  hosts: lab_jump
   gather_facts: false
 
   # The zone details is the top level DNS zone where the record is located
