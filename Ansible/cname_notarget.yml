@@ -19,7 +19,7 @@
   tasks:
     - name: Execute Set-DNSTTLCNAME on labadexternal via Jump01
       ansible.windows.win_command: >
-        powershell.exe -ExecutionPolicy Bypass -File C:\scripts\Set-DNSTTLCNAME.ps1 -Zone {{ zone }} -Name {{ record_name }} -TTL {{ ttl_seconds }}
+        powershell.exe -ExecutionPolicy Bypass -File C:\scripts\Set-DNSTTLCNAME.ps1 -Zone {{ cname_zone }} -Name {{ cname_record_name }} -TTL {{ ttl_seconds }}
       register: result
 
     - name: Show the output
