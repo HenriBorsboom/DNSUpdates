@@ -9,11 +9,6 @@
   # The TTL is required and specified in seconds
   # This only works on A records
 
-  vars:
-    zone:         'bank.local'
-    record_name:  'mydummyhost'
-    ttl_seconds:  '60'
-
   tasks:
     - name: Execute Set-DNSTTLA on labadexternal via Jump01
       ansible.windows.win_command: >
