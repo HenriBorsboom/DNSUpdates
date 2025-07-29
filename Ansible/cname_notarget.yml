@@ -1,6 +1,5 @@
 ---
 - name: "Hop through Jump01 to Update DNS"
-  hosts: lab_jump
   gather_facts: false
 
   # The zone details is the top level DNS zone where the record is located
@@ -15,11 +14,6 @@
   # Rember that there is a ending . for the new_target
   # This only works on A records
   # If you are not using a new_target, remove the "-NewTarget {{ new_target }}" from the command
-
-  vars:
-    zone:         'bank'
-    record_name:  'dummyalias.int'
-    ttl_seconds:  '60'
 
   tasks:
     - name: Execute Set-DNSTTLCNAME on labadexternal via Jump01
